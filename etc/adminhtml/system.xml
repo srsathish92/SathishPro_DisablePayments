@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author sathish.pro
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="sathishpro" translate="label" sortOrder="100">
+            <label>sathishPro</label>
+        </tab>
+        <section id="sathishpro" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>SathishPro</label>
+            <tab>sathishpro</tab>
+            <resource>SathishPro_DisablePayments::settings</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+                <field id="enabled" translate="label comment" type="select" showInDefault="1" canRestore="1" showInStore="1">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="methods" translate="label comment" type="multiselect" sortOrder="20" showInDefault="1" canRestore="1" showInStore="1">
+                    <label>Disable Payment Methods</label>
+                    <source_model>SathishPro\DisablePayments\Model\Config\Source\Allmethods</source_model>
+                    <comment>Selected payment methods will disable in frontend only</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
