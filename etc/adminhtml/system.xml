@@ -21,8 +21,9 @@
                 </field>
                 <field id="methods" translate="label comment" type="multiselect" sortOrder="20" showInDefault="1" canRestore="1" showInStore="1">
                     <label>Disable Payment Methods</label>
-                    <source_model>SathishPro\DisablePayments\Model\Config\Source\Allmethods</source_model>
+                    <source_model>Magento\Payment\Model\Config\Source\Allmethods</source_model>
                     <comment>Selected payment methods will disable in frontend only</comment>
+                    <can_be_empty>1</can_be_empty>
                 </field>
             </group>
         </section>
